@@ -17,7 +17,7 @@ import com.example.mathchat.placeholder.PlaceholderContent;
 /**
  * A fragment representing a list of Items.
  */
-public class MessagingFragment extends Fragment {
+public class ConversationFragment extends Fragment {
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -28,13 +28,13 @@ public class MessagingFragment extends Fragment {
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public MessagingFragment() {
+    public ConversationFragment() {
     }
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static MessagingFragment newInstance(int columnCount) {
-        MessagingFragment fragment = new MessagingFragment();
+    public static ConversationFragment newInstance(int columnCount) {
+        ConversationFragment fragment = new ConversationFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
         fragment.setArguments(args);
