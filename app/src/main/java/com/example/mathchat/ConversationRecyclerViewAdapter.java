@@ -3,24 +3,23 @@ package com.example.mathchat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.mathchat.placeholder.PlaceholderContent.PlaceholderItem;
+import com.example.mathchat.placeholder.Message;
 import com.example.mathchat.databinding.FragmentItemBinding;
 
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link PlaceholderItem}.
+ * {@link RecyclerView.Adapter} that can display a {@link Conversation}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class MyMessagingRecyclerViewAdapter extends RecyclerView.Adapter<MyMessagingRecyclerViewAdapter.ViewHolder> {
+public class ConversationRecyclerViewAdapter extends RecyclerView.Adapter<ConversationRecyclerViewAdapter.ViewHolder> {
 
-    private final List<PlaceholderItem> mValues;
+    private final List<Conversation.ConversationItem> mValues;
 
-    public MyMessagingRecyclerViewAdapter(List<PlaceholderItem> items) {
+    public ConversationRecyclerViewAdapter(List<Conversation.ConversationItem> items) {
         mValues = items;
     }
 
@@ -46,7 +45,7 @@ public class MyMessagingRecyclerViewAdapter extends RecyclerView.Adapter<MyMessa
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final TextView mIdView;
         public final TextView mContentView;
-        public PlaceholderItem mItem;
+        public Conversation mItem;
 
         public ViewHolder(FragmentItemBinding binding) {
             super(binding.getRoot());
